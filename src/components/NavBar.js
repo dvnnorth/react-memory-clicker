@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Functional nav bar component. Will display the game score and click status via props
 let NavBar = props => (
     <nav className="bg-warning">
         <div className="container">
@@ -11,11 +12,13 @@ let NavBar = props => (
                 </div>
                 <div className="col">
                     <p className="text-shadow text-white text-center text-scale">
+                        {/* resultsDisplay will be provided by App via state change */}
                         {props.resultsDisplay}
                     </p>
                 </div>
                 <div className="col">
                     <p className="text-shadow text-white text-center text-scale">
+                        {/* score and topScore will be provided by App via state change */}
                         Score: {props.score} | Top Score: {props.topScore}
                     </p>
                 </div>

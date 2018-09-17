@@ -30,10 +30,12 @@ class App extends Component {
       // If unsuccessful, reset score and change resultsDisplay
       this.setState({ score: 0 });
       this.handleDisplayChange(false);
-
     }
   };
 
+  // handleDisplayChange will change the message displayed to the user depending
+  // on game state (successful click, unsuccessful click). Message for initial
+  // state set in component constructor
   handleDisplayChange = success => {
     let onSuccess = 'You guessed correctly!';
     let onFailure = 'You guessed incorrectly...';
@@ -46,6 +48,8 @@ class App extends Component {
     }
   };
 
+  // This method will update the current top score on reset if the
+  // current score is greater than the current top score
   handleTopScore = score => {
     if (score > this.state.topScore) {
       this.setState({ topScore: score });
