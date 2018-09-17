@@ -1,0 +1,50 @@
+[
+    {
+        "src": "images/card1.jpg",
+        "alt": "Card 1: El Gallo"
+    },
+    {
+        "src": "images/card3.jpg",
+        "alt": "Card 3: La Dama"
+    },
+    {
+        "src": "images/card4.jpg",
+        "alt": "Card 4: El Catrin"
+    },
+    {
+        "src": "images/card5.jpg",
+        "alt": "Card 5: El Paraguas"
+    },
+    {
+        "src": "images/card12.jpg",
+        "alt": "Card 12: El Valiente"
+    },
+    {
+        "src": "images/card15.jpg",
+        "alt": "Card 15: La Pera"
+    },
+    {
+        "src": "images/card21.jpg",
+        "alt": "Card 21: La Mano"
+    },
+    {
+        "src": "images/card22.jpg",
+        "alt": "Card 22: La Bota"
+    },
+    {
+        "src": "images/card23.jpg",
+        "alt": "Card 23: La Luna"
+    },
+    {
+        "src": "images/card27.jpg",
+        "alt": "Card 27: El Corazon"
+    },
+    {
+        "src": "images/card35.jpg",
+        "alt": "Card 35: La Estrella"
+    },
+    {
+        "src": "images/card46.jpg",
+        "alt": "Card 46: El Sol"
+    }
+]
