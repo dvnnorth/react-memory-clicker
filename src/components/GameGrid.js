@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import images from '../images.json';
 import _ from 'lodash';
-import update from 'immutability-helper';
+import uuidv4 from 'uuid/v4';
 import ClickyImage from './ClickyImage';
 
 class GameGrid extends Component {
@@ -13,10 +13,11 @@ class GameGrid extends Component {
             // Using lodash map
             // handleImageClick will change display and update App score state
             // resetAll will generate a new array of ClickyImages and render them
-            //      happens on unsuccessful click (image has already been clicked)
-            let clickyImages = _.map(images, (image, i) => (
+            //      happens on unsuccessful click (image has already been clicked
+
+            let clickyImages = _.map(images, image => (
                 <ClickyImage
-                    key={i}
+                    key={uuidv4()}
                     handleImageClick={props.handleImageClick}
                     resetAll={this.resetAll}
                     src={image.src}
@@ -31,18 +32,21 @@ class GameGrid extends Component {
             // Was having issues updating the state using various methods; 
             // this library solved my issues. 
             // Generate a new set  of <ClickyImage> components to be rendered
-            let newState = update(this.state, {
-                images: {
-                    $set: [...this.generateClickyImages()]
-                }
-            });
-            this.setState(newState);
-        }
-        
+
+            this.setState({ images: [...this.generateClickyImages()] });
+
+            // let newState = update(this.state, {
+            //     images: {
+            //         $set: [...this.generateClickyImages()]
+            //     }
+            // });
+            // this.setState(newState);
+        };
+
         // Store array collection of ClickyImages
         this.state = {
             images: this.generateClickyImages()
-        }
+        };
     }
 
     // Render image grid
